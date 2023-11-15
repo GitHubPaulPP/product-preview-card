@@ -130,36 +130,63 @@ body {
     /* Ensures the cursor remains a hand icon when the button is pressed */
 }
 
-/* Styles that apply to desktop and mobile */
+/* Base styles for desktop, assuming 1440px is the default design */
 
-.image,
-.card {
-    /* Shared properties */
-}
+/* ... other styles ... */
 
 /* Mobile styles */
 @media screen and (max-width: 375px) {
+    body {
+        display: flex;
+        /* Changes layout from grid to flex for mobile */
+        flex-direction: column;
+        /* Stacks elements vertically */
+        align-items: center;
+        /* Centers items on the cross-axis */
+        padding: 0;
+        /* Adjust padding as needed */
+    }
 
     .image,
     .card {
         width: 100%;
+        /* Full width */
         max-width: none;
+        /* Overrides any max-width */
         height: auto;
-        grid-column: 1 / -1;
+        /* Height adjusts to maintain aspect ratio */
+        grid-column: unset;
+        /* Resets grid-column if it was previously set */
         border-radius: 0;
+        /* Resets any border-radius */
     }
 
     .card {
         order: 2;
+        /* Ensures card comes after image */
         padding: 20px;
+        /* Adjust padding to match mobile design */
+        height: auto;
+        /* Allows card to expand as needed */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Optional: Adds shadow for depth */
     }
 
     .image {
         order: 1;
+        /* Ensures image comes before card */
+    }
+
+    /* You may want to adjust button and text sizes here as well */
+    .button1 {
+        width: calc(100% - 40px);
+        /* Adjust width for padding */
     }
 }
 
-/* Desktop styles */
-@media screen and (min-width: 1440px) {
-    /* Desktop-specific styles, if different from the base */
-}
+/* ... other styles ... */
+
+
+
+
+
