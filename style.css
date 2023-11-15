@@ -166,6 +166,7 @@ body {
         /* Ensure image is on top */
         display: block;
         /* Display block to fill width */
+        
     }
 
     .card {
@@ -192,4 +193,28 @@ body {
     }
 
     /* Other text and element adjustments can go here */
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+    .image {
+        height: auto;
+        /* Adjust based on aspect ratio */
+        max-height: 240px;
+        /* Example max height, adjust as needed */
+        margin-bottom: 20px;
+        /* Adds space between image and card */
+    }
+
+    .card .p2 {
+        margin-bottom: 16px;
+        /* Adds space between the description and price */
+    }
+
+    .pricing {
+        margin-bottom: 24px;
+        /* Adds space between the price and button */
+    }
+
+    /* ... other styles ... */
 }
