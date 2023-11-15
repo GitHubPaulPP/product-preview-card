@@ -133,13 +133,15 @@ body {
 /* Mobile styles */
 @media screen and (max-width: 480px) {
 
+
     /* Adjusted for broader mobile device compatibility */
     body {
-        display: block;
+        display: flex;
+        flex-direction: column;
         /* Stack elements vertically */
-        margin: 0 auto;
+        /* margin: 0 auto; */
         /* Center the content */
-        padding: 0 20px;
+        /* padding: 0 20px; */
         /* Add some padding on the sides */
         align-items: center;
         /* Center items horizontally */
@@ -159,6 +161,9 @@ body {
         /* Reset border-radius */
         /* margin-bottom: 20px; */
         /* Add space between image and card */
+        width: 345px;
+        max-width: 100%;
+
     }
 
     .image {
@@ -166,7 +171,7 @@ body {
         /* Ensure image is on top */
         display: block;
         /* Display block to fill width */
-        
+
     }
 
     .card {
@@ -208,19 +213,28 @@ body {
         border-radius: 0.7rem 0.7rem 0rem 0rem;
     }
 
-    .card{
+    .card {
         border-radius: 0rem 0rem 0.7rem 0.7rem;
+
+    }
+
+    .card .p1 {
+        margin-bottom: 10px;
     }
 
     .card .p2 {
         margin-bottom: 20px;
+        margin-top: 15px;
         /* Adds space between the description and price */
     }
 
     .pricing {
-        margin-bottom: 24px;
+        margin-bottom: 5px;
         /* Adds space between the price and button */
     }
 
     /* ... other styles ... */
 }
+
+.button1 {
+    align-self: center;
